@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -14,9 +18,9 @@
     <title>Home</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
     <div class="d-flex flex-row bd-highlight">
-        <a class="navbar-brand" href="index.html">Docker, Linux and Containerization</a>
+        <a class="navbar-brand" href="index.html" style="font-family: Courier,serif">Docker & Containers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -28,6 +32,15 @@
                     <a class="nav-item nav-link" href="how_do_they_compare.html">How Do they Compare</a>
                     <a class="nav-item nav-link" href="linux_commands_and_logging.html">Linux Commands and Logging</a>
                 </div>
+                <div class="dropdown dropdown-menu-right">
+                    <button type="button" class="btn btn-close-white bg-primary dropdown-toggle" style="color: white" data-toggle="dropdown">
+                        Tutorials
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="local_web_server_tutorial.html">Local Web Server Tutorial</a>
+                        <a class="dropdown-item" href="connecting_docker_with_pycharm.html">Connecting Docker With Pycharm Tutorial</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -35,9 +48,30 @@
 
 <div class="container">
     <div style="text-align: center">
-        <h2 style="font-family: Courier,serif">
-            Docker, Linux, and Containerization
-        </h2>
+        <h1 style="font-family: Courier,serif">
+            Docker & Containers
+        </h1>
+    </div>
+    <div style="text-align: center">
+        <img src="images/docker_containers_linux.png" alt="the-internet" class="rounded" width="700" height="400">
+        <h6 style="font-family: Courier">
+            Creds: https://miro.medium.com/max/2492/1*JN0WNErLpr5k2y_Euqiegw.png
+        </h6>
+        <div class="pt-3">
+            <hr>
+            <h2 style="font-family: Courier,serif">
+                Introduction
+            </h2>
+            <p style="font-family:verdana,serif">
+                Lorem Ipsum.
+            </p>
+            <hr>
+        </div>
+        <div>
+            <div>
+                <a href="index.html">Home |</a>
+            </div>
+        </div>
     </div>
 </div>
 </body>
