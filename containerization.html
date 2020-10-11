@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <style>
+        body {background-blend-mode: lighten;}
+    </style>
+    <title>Containerization</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+    <div class="d-flex flex-row bd-highlight">
+        <a class="navbar-brand" href="index.html" style="font-family: Courier,serif">Docker & Containers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="d-flex">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">Home</a>
+                    <a class="nav-item nav-link" href="virtualization.html">Virtualization</a>
+                    <a class="nav-item nav-link" href="containerization.html">Containerization</a>
+                    <a class="nav-item nav-link" href="how_do_they_compare.html">How Do they Compare</a>
+                    <a class="nav-item nav-link" href="linux_commands_and_logging.html">Linux Commands and Logging</a>
+                </div>
+                <div class="dropdown dropdown-menu-right">
+                    <button type="button" class="btn btn-close-white bg-primary dropdown-toggle" style="color: white" data-toggle="dropdown">
+                        Tutorials
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="local_web_server_tutorial.html">Local Web Server Tutorial</a>
+                        <a class="dropdown-item" href="connecting_docker_with_pycharm.html">Connecting Docker With Pycharm Tutorial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div style="text-align: center">
+        <h1 style="font-family: Courier,serif">
+            Containerization
+        </h1>
+    </div>
+    <div style="text-align: center">
+        <img src="images/containerization.jpg" alt="containers" class="rounded" width="700" height="400">
+        <h6 style="font-family: Courier">
+            Creds: https://www.devopsuniversity.org/wp-content/uploads/2020/03/devops_university_docker_containerization3.jpg
+        </h6>
+        <div class="pt-3">
+            <hr>
+            <h2 style="font-family: Courier,serif">
+                What is it?
+            </h2>
+            <p style="font-family:verdana,serif">
+                Containerization, a light-weight process that allows applications to be "written once and run everywhere"
+                in simple terms. An alternative to virtualization, allows packaging of software and any dependencies into
+                containers of sorts that is abstracted away from the OS. It's able to run cross platform and across any
+                suitable means of the cloud, virtual or physical machines.
+            </p>
+            <img src="images/beauty_of_containerization.png" alt="beauty-of-containers" class="rounded" width="500" height="200">
+            <h6 style="font-family: Courier">
+                Creds: https://hackernoon.com/hn-images/1*VxAJ5aCzUJtmVhdg290RXg.png
+            </h6>
+            <p style="font-family:verdana,serif">
+                With containers, CPU, memory, storage and network resources at the OS level are virtualized to provide
+                developers a sandboxed view logically separated from other applications. Any number of applications
+                can be run through X many containers which are all managed through a container engined hosted through a
+                Host OS.
+            </p>
+            <hr>
+            <h2 style="font-family: Courier,serif">
+                Where does docker come in?
+            </h2>
+            <p style="font-family:verdana,serif">
+                Docker is a containerization platform that allows one to be able to create, deploy and run applications
+                using containers. It packages one's application and all of the associated dependencies together in a
+                container(s) to work seamlessly in any environment. Mainly developed for Linux, uses the resource
+                isolation features of the Linux Kernel. It allows for complete monitor and management of containers using
+                the Docker API and uses low CPU/Memory overhead.
+            </p>
+            <hr>
+        </div>
+        <div>
+            <div>
+                <a href="index.html">Home |</a>
+                <a href="containerization.html">Containerization </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
