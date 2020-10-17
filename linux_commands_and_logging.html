@@ -52,6 +52,7 @@
         <h1 style="font-family: Courier,serif">
             Linux Commands
         </h1>
+        <img src="images/tux.png" alt="Tux, seen as the unofficial Linux mascot.">
     </div>
     <div>
         <div class="pt-3">
@@ -73,25 +74,57 @@
                     <li><code>echo</code> - display the commands argument back into the terminal, can also be redirected into a file</li>
                     <li><code>cat</code> - display the contents of a file</li>
                 </ul>
+            <h5 style="font-family: Courier">
+                Resources
+            </h5>
+            <p style="font-family:verdana,serif">
+            <ul>
+                <li><a href="https://www.linux.com/what-is-linux/" target="_blank">What is Linux?</a></li>
+                <li><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git" target="_blank">Linux Source Code</a></li>
+                <li><a href="https://man7.org/linux/man-pages/index.html" target="_blank">Online Man Pages</a></li>
+                <li><a href="https://www.linuxfoundation.org/" target="_blank">The Linux Foundation</a></li>
+                <li><a href="https://www.tecmint.com/linux-commands-cheat-sheet/" target="_blank">More Linux commands</a></li>
+            </ul>
             </p>
             <hr>
             <h4 style="font-family: Courier">
                 Linux Docker Commands
             </h4>
+
             <p style="font-family:verdana,serif">
             <ul>
             <li><code>docker --version</code> - display docker version</li>
-            <li><code><a href="https://docs.docker.com/engine/reference/commandline/search/">docker search</a> nginx</code> - search for docker images (e.x. nginx) from a registry (default to Docker Hub)</li>
-            <li><code><a href="https://docs.docker.com/engine/reference/commandline/pull/">docker pull</a> nginx</code> - download docker image with latest tag (default) from registry</li>
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/search/" target="_blank">docker search</a> nginx</code> - search for docker images (e.x. nginx) from a registry (default to Docker Hub)</li>
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/pull/" target="_blank">docker pull</a> nginx</code> - download docker image with latest tag (default) from registry</li>
             <ul>
                 <li><code>docker pull nginx:1.19.3</code> - download a specific version (tag) of an image</li>
             </ul>
-            <li><code><a href="https://docs.docker.com/engine/reference/commandline/images/">docker images</a></code> - list all downloaded docker images</li>
-            <li><code><a href="https://docs.docker.com/engine/reference/run/">docker run</a> -it nginx</code> - run a docker container from the nginx image. <code>-it</code> will allow for an interactive
-            shell and allocate a tty. From the user perspective, this is running a shell <i>inside</i> the container.</li>
-
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/push/">docker push</a> myrepo/myimage:tagname </code>- push changes of your image to a repository</li>
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/images/" target="_blank">docker images</a></code> - list all downloaded docker images</li>
+            <ul>
+                <li><code>docker image rm nginx</code> - delete an image from the local image store</li>
+            </ul>
+            <li><code><a href="https://docs.docker.com/engine/reference/run/" target="_blank">docker run</a> --name nginx-container -it nginx</code> - run a docker container from the nginx image. <code><a href="https://docs.docker.com/engine/reference/run/#foreground" target="_blank">-it</a></code> will allow for an interactive
+            shell and allocate a tty. From the user perspective, this is running a shell <i>inside</i> the container. The <code>--name</code> flag will assign the container with the supplied name, otherwise a random name is used.</li>
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/logs/" target="_blank">docker logs</a> -f nginx-container</code> - this will fetch the logs of a specified container. The <code>-f</code> will follow the logs and continue to stream new output from a container's <code>STDOUT</code> and <code>STDERR</code></li>
             </ul>
             </p>
+
+            <h5 style="font-family: Courier">
+                Resources
+            </h5>
+            <p style="font-family:verdana,serif">
+                <ul>
+
+            <li><a href="https://docs.docker.com/" target="_blank">Official Docker Documentation</a></li>
+            <li><a href="https://hub.docker.com/" target="_blank">Docker Hub</a></li>
+            <li><a href="https://github.com/docker/docker-ce" target="_blank">Docker Source Code</a></li>
+            <li><a href="https://www.ubuntupit.com/important-docker-commands-for-software-developers/" target="_blank">More Docker commands</a></li>
+
+                </ul>
+            </p>
+
+
             <hr>
         </div>
     </div>
