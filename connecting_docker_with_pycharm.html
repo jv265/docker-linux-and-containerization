@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/docker_hub_image.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <style>
+        body {background-blend-mode: lighten;}
+    </style>
+    <title>Connecting Docker with Pycharm</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+    <div class="d-flex flex-row bd-highlight">
+        <a class="navbar-brand" href="index.html" style="font-family: Courier,serif">Docker & Containers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="d-flex">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">Home</a>
+                    <a class="nav-item nav-link" href="virtualization.html">Virtualization</a>
+                    <a class="nav-item nav-link" href="containerization.html">Containerization</a>
+                    <a class="nav-item nav-link" href="how_do_they_compare.html">How Do they Compare</a>
+                    <a class="nav-item nav-link" href="linux_commands_and_logging.html">Linux Commands and Logging</a>
+                </div>
+                <div class="dropdown dropdown-menu-right">
+                    <button type="button" class="btn btn-close-white bg-primary dropdown-toggle" style="color: white" data-toggle="dropdown">
+                        Tutorials
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="local_web_server_tutorial.html">Local Web Server Tutorial</a>
+                        <a class="dropdown-item" href="connecting_docker_with_pycharm.html">Connecting Docker With Pycharm Tutorial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div style="text-align: center">
+        <h1 style="font-family: Courier,serif">
+            Connecting Docker with Pycharm
+        </h1>
+    </div>
+    <div style="text-align: center">
+        <img src="images/run_docker_with_python.webp" alt="containers" class="rounded" width="700" height="400">
+        <h6 style="font-family: Courier">
+            Creds: https://files.realpython.com/media/Run-Different-Python-Versions-With-Docker_Watermarked.341ab433e5a0.jpg
+        </h6>
+        <div class="pt-3">
+            <hr>
+            <h2 style="font-family: Courier,serif">
+                Introduction
+            </h2>
+            <p style="font-family:verdana,serif">
+                So, you want to run a Python program within a docker container? Well, your in luck! This tutorial will
+                try its best to teach you. Get ready to be dockerized in Pycharm!
+            </p>
+            <hr>
+            <h2 style="font-family: Courier,serif">
+                Tutorial Steps
+            </h2>
+            <p style="font-family:verdana,serif">
+                <h3>Step 1</h3><br>
+                First install docker and if installed, make sure it is running locally.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Docker_running_locally.png" alt="docker-run-locally" class="rounded" width="700" height="350">
+            <p style="font-family:verdana,serif">
+                <h3>Step 2</h3><br>
+            	Add a basic Python file (.py) defined under the src folder.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Sample_python_file.png" alt="docker-run-locally" class="rounded" width="700" height="350">
+            <p style="font-family:verdana,serif">
+                <h3>Step 3</h3><br>
+                Add a Dockerfile with the following content that you can change as needed. It will install python 3,
+                take the code from the src folder and move it to a src folder in the docker container. Next, it will run the
+                pip installation and finally, it will run the python command with the directory defined.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Docker_file_contents.png" alt="docker-run-locally" class="rounded" width="700" height="350">
+            <p style="font-family:verdana,serif">
+                <h3>Step 4</h3><br>
+                We need to connect Docker with Pycharm next. Select <b>Preferences</b> (for MAC users), <b>File > Settings</b> for
+                Windows Users.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Adding_docker_build.png" alt="docker-run-locally" class="rounded" width="700" height="350">
+            <br><br> <p style="font-family:verdana,serif">
+                Under <b>Build, Execution, Deployment</b> Select <b>Docker</b>. Click on Add if Docker doesn’t appear within the list.
+                Since I’m using Mac, I have Docker for Mac selected under the Connect to Docker daemon with: section.
+                However, for Windows if you have the docker server running the Docker Machine: should be populated with
+                local.
+
+                If everything is working as expected, you should see <b>Connection successful</b> like above.
+            </p>
+            <p style="font-family:verdana,serif">
+                <h3>Step 5</h3><br>
+                We need to setup the run configurations so that we can run the program with Docker. So, click on
+                <b>Add Configuration</b>, near the top.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Config_setup_contents.png" alt="docker-run-locally" class="rounded" width="700" height="350">
+            <br><br> <p style="font-family:verdana,serif">
+                Next, Click on the plus icon to add a new configuration.
+            </p>
+            <img src="images/docker_pycharm_tutorial/New_config_setup.png" alt="docker-run-locally" class="rounded" width="700" height="350">
+            <br><br> <p style="font-family:verdana,serif">
+                Select <b>Dockerfile</b> as the new configuration and enter the follow information as follows.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Run_configs.png" alt="docker-run-locally" class="rounded" width="700" height="350">
+            <br><br> <p style="font-family:verdana,serif">
+                Enter the name of the run config. Select the Dropdown list for <b>DockerFile:</b> and select <b>Dockerfile</b>.
+                Type the name of the <b>Image tag</b> preferably the same as the run config and click <b>Apply</b> and <b>OK</b>.
+            </p>
+            <p style="font-family:verdana,serif">
+                <h3>Step 6</h3><br>
+                Hit the Play button when ready
+            </p>
+            <img src="images/docker_pycharm_tutorial/Build_log.png" alt="docker-run-locally" class="rounded" width="850" height="350">
+            <br><br><img src="images/docker_pycharm_tutorial/Attached_console.png" alt="docker-run-locally" class="rounded" width="850" height="350">
+            <br><br> <p style="font-family:verdana,serif">
+                You should see the above content when it has successfully built and deployed. Under the <b>Build Log</b> section,
+                it shows what all things had to run for the build to finish and deploy a docker container. The <b>Log</b> or
+                <b>Attached Console</b> section will display the contents of whatever you printed out in your script.
+            </p>
+            <p style="font-family:verdana,serif">
+                <h3>Final Step</h3><br>
+                We’re almost finished! We just need to setup our python interpreter so it knows what version of Python
+                to run. Click on the version of python that is being used and select <b>Add Interpreter…”</b>.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Selecting_docker_for_interpreter.png" alt="docker-run-locally" class="rounded" width="850" height="350">
+            <br><br><p style="font-family:verdana,serif">
+                It will register the image name and just click <b>OK</b>. Once done, it will either auto select the version of
+                Python or you might just need to select the new version that was just added. This will just use the python
+                version used within your docker container. Next, go to <b>Interpreter Settings</b> which you’ll see if you
+                click on the Python version on the bottom left.
+            </p>
+            <img src="images/docker_pycharm_tutorial/Select_interpreter.png" alt="docker-run-locally" class="rounded" width="850" height="350">
+            <br><br><p style="font-family:verdana,serif">
+                This will bring up and update all the libraries that were installed. Just Click <b>Apply</b> and <b>OK</b>
+                when ready. Now, any lines underneath our code will be removed since we defined the proper version.
+            </p>
+            <br><br><p style="font-family:verdana,serif">
+                <i>Congratulations! You have now set up a python project within a docker container within Pycharm.</i>
+            </p>
+            <hr>
+        </div>
+        <div>
+            <div>
+                <a href="index.html">Home |</a>
+                <a href="containerization.html">Containerization |</a>
+                <a href="how_do_they_compare.html">How Do They Compare </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
