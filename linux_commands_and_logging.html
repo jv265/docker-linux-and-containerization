@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/docker_hub_image.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <style>
+        body {background-blend-mode: lighten;}
+    </style>
+    <title>Linux Commands</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+    <div class="d-flex flex-row bd-highlight">
+        <a class="navbar-brand" href="index.html" style="font-family: Courier,serif">Docker & Containers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="d-flex">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">Home</a>
+                    <a class="nav-item nav-link" href="virtualization.html">Virtualization</a>
+                    <a class="nav-item nav-link" href="containerization.html">Containerization</a>
+                    <a class="nav-item nav-link" href="how_do_they_compare.html">How Do they Compare</a>
+                    <a class="nav-item nav-link" href="linux_commands_and_logging.html">Linux Commands and Logging</a>
+                </div>
+                <div class="dropdown dropdown-menu-right">
+                    <button type="button" class="btn btn-close-white bg-primary dropdown-toggle" style="color: white" data-toggle="dropdown">
+                        Tutorials
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="local_web_server_tutorial.html">Local Web Server Tutorial</a>
+                        <a class="dropdown-item" href="connecting_docker_with_pycharm.html">Connecting Docker With Pycharm Tutorial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div style="text-align: center">
+        <h1 style="font-family: Courier,serif">
+            Linux Commands
+        </h1>
+    </div>
+    <div>
+        <div class="pt-3">
+            <hr>
+            <h4 style="font-family: Courier,serif">
+                Basic Linux Commands
+            </h4>
+            <p style="font-family:verdana,serif">
+                <ul>
+                    <li><code>pwd</code> - prints the current directory you are in</li>
+                    <li><code>ls</code> - lists all the files in your current directory</li>
+                    <li><code>cd</code> - change to another directory</li>
+                    <li><code>mkdir</code> - create a directory</li>
+                    <li><code>rmdir</code> - remove an empty directory</li>
+                    <li><code>rm</code> - remove a file, or remove a directory with files (<code>rm -r</code>)</li>
+                    <li><code>touch</code> - create an empty file</li>
+                    <li><code>man</code> - display a manual page of a command</li>
+                    <li><code>cp</code> - copy a file</li>
+                    <li><code>echo</code> - display the commands argument back into the terminal, can also be redirected into a file</li>
+                    <li><code>cat</code> - display the contents of a file</li>
+                </ul>
+            </p>
+            <hr>
+            <h4 style="font-family: Courier">
+                Linux Docker Commands
+            </h4>
+            <p style="font-family:verdana,serif">
+            <ul>
+            <li><code>docker --version</code> - display docker version</li>
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/search/">docker search</a> nginx</code> - search for docker images (e.x. nginx) from a registry (default to Docker Hub)</li>
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/pull/">docker pull</a> nginx</code> - download docker image with latest tag (default) from registry</li>
+            <ul>
+                <li><code>docker pull nginx:1.19.3</code> - download a specific version (tag) of an image</li>
+            </ul>
+            <li><code><a href="https://docs.docker.com/engine/reference/commandline/images/">docker images</a></code> - list all downloaded docker images</li>
+            <li><code><a href="https://docs.docker.com/engine/reference/run/">docker run</a> -it nginx</code> - run a docker container from the nginx image. <code>-it</code> will allow for an interactive
+            shell and allocate a tty. From the user perspective, this is running a shell <i>inside</i> the container.</li>
+
+            </ul>
+            </p>
+            <hr>
+        </div>
+        <div>
+            <div>
+                <a href="index.html">Home |</a>
+                <a href="containerization.html">Containerization |</a>
+                <a href="how_do_they_compare.html">How Do They Compare </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
