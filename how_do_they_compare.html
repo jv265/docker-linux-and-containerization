@@ -58,15 +58,64 @@
         <h6 style="font-family: Courier">
             Creds: https://www.veritis.com/wp-content/uploads/2019/06/Virtualization-vs-Containerization.jpg
         </h6>
-        <div class="pt-3">
-            <hr>
-            <h2 style="font-family: Courier,serif">
-                Introduction
-            </h2>
-            <p style="font-family:verdana,serif">
-            </p>
-            <hr>
-        </div>
+    </div>
+    <div class="pt-3">
+        <hr>
+        <p style="font-family:verdana,serif; text-align: center">
+            The table below compares and contrasts Containerization and Virtualization
+        </p>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col" style="text-align: center">Virtualization</th>
+            <th scope="col" style="text-align: center">Containerization</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Can run in just about any operating system inside of the virtual machine</td>
+            <td>Can run on the same operating system as the host </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Provides isolation during the run of an application from the host OS and the other VMs while sharing the same OS resources</td>
+            <td>Similar, but it has its own OS so that VM systems can run different operating systems and each VM can host multiple applications instead of one</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Can run a complete operating system including the kernel which requires more system resources such as CPU, memory and storage</td>
+            <td>Can run the needed services including needed dependencies etc. for an application using fewer system resources</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Can deploy individual VMs by using Hypervisor software	</td>
+            <td>Can deploy individual containers by using Docker or deploy multiple containers by using an orchestrator such as Kubernetes</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Virtual machine load balancing is done by running VMs in other servers in a failover cluster</td>
+            <td>Can automatically start or stop containers to manage changes in load and availability</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>Can take time for setup and run</td>
+            <td>Can be relatively quicker to setup and run</td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>Allocates the required memory</td>
+            <td>Requires less memory than VMs</td>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <td>Since its isolated, more secure</td>
+            <td>Possibly less secure due to Process-Level isolation</td>
+        </tr>
+        </tbody>
+    </table>
     </div>
 </div>
 </body>
